@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="w-screen overflow-hidden bg-[#67625C]">
+    <footer className="w-screen overflow-hidden py-6 bg-[#67625C]">
       <div className="max-w-6xl mx-auto px-8 py-4 flex flex-col sm:flex-row items-center justify-between text-sm text-[#F3E9DD]/80">
         
         {/* Left */}
