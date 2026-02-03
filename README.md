@@ -1,16 +1,100 @@
-# React + Vite
+# To-Do Application – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based frontend for a full-stack To-Do application.  
+This application allows users to register, log in, and manage their personal tasks securely.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
+- React (Vite)
+- JavaScript (ES6+)
+- React Router DOM
+- Axios
+- Tailwind CSS
+- React Toastify
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
+- User Registration and Login
+- JWT-based authentication
+- Reusable authentication page for Login and Register
+- Create, view, update, and delete tasks
+- Mark tasks as completed or pending
+- Auth-protected task management
+- Simple and user-friendly UI
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🔐 Authentication Design
+
+The application uses a **single `Auth.jsx` component** for both Login and Register.
+
+- A prop determines whether the component behaves as:
+  - Login form
+  - Register form
+- This approach:
+  - Reduces code duplication
+  - Centralizes authentication logic
+  - Improves maintainability
+
+This design decision is intentional and follows common React best practices.
+
+---
+
+## 📂 Folder Structure
+
+src/
+
+├── pages/
+
+│ ├── Auth.jsx
+
+│ ├── ToDoTasks.jsx
+
+├── services/
+
+│ ├── commonAPI.js
+
+│ ├── allAPI.js
+
+├── assets/
+
+├── App.jsx
+
+└── main.jsx
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/dev-suryajith/To-Do-Application-frontend.git
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Start the development server
+```bash
+npm run dev
+```
+
+🔗 Backend Integration
+
+This frontend communicates with a RESTful backend API built using Node.js and Express.
+
+Ensure the backend server is running before using the application.
+
+📌 Notes
+
+JWT token is stored in localStorage
+
+Token is sent via the Authorization header for protected API requests
+
+Unauthorized users are redirected to the authentication page
+
+---
